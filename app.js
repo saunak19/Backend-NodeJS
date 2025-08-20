@@ -1,33 +1,28 @@
-// let a = [10,1,2,6,4,5];
-// let b = [8,7,9,6,1,4,2];
-// let unique = [];
+// const http = require("http");
 
-// let margeAB = a.concat(b);
+// const server = http.createServer((req, res) => {
+//   res.end("Server is running");
+// });
 
-// for(let i=0; i<margeAB.length; i++){
-//     for(let j=0; j<i; j++){
-//         if(margeAB[i]<margeAB[j]){
-//             [margeAB[i],margeAB[j]]=[margeAB[j],margeAB[i]]
-//         }
-//     }
-// }
-// let i=0;
-// let j=1;
-// for(let k=0; k<margeAB.length-1;k++){
-//     if(margeAB[i]==margeAB[j]){
-//         unique.push(margeAB[k])
-//     }
-//     i++;
-//     j++;
-// }
-// console.log(unique)
+// server.listen(3000, () => {
+//   console.log(`Server is running`);
+// });
+// Import OS module
+// const os = require("os");
 
-const http = require("http");
+// Get CPU info
+// const cpus = os.cpus();
 
-const server = http.createServer((req, res) => {
-  res.end("Server is running");
-});
+// console.log("Processor Information:\n");
 
-server.listen(3000, () => {
-  console.log(`Server is running`);
-});
+// cpus.forEach((cpu, index) => {
+//   console.log(`Core ${index + 1}:`);
+//   console.log(` Model : ${cpu.model}`);
+//   console.log(` Speed : ${cpu.speed} MHz`);
+//   console.log("-----------------------------");
+// });
+// console.log(`Total Cores: ${cpus.length}`);
+
+const { exec } = require("child_process");
+
+exec(`powershell -Command "setx VARIABLE_NAME 'Ahir saunak' /M"`);
